@@ -1,0 +1,27 @@
+openapi: 3.0.0
+tags:
+  - name: provider
+get:
+
+  description: None
+paths:
+    ​/api​/provider​/{provider_id}
+
+summary: Returns provider and product by provider_id.
+parameters:
+        - name: provider_id
+          in: path
+          required: true
+          default: 2
+          description: Input {provider_id} output the provider and product.
+          schema:
+            type : integer
+            format: int64
+            minimum: 0
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error

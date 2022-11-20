@@ -1,0 +1,53 @@
+openapi: 3.0.0
+tags:
+  - name: provider
+get:
+
+  description: None
+paths:
+    ​/api​/provider​/{provider_id}
+
+summary: Returns provider and product by provider_id.
+parameters:
+        - name: provider_id
+          in: query
+          required: true
+          default: 3
+          description: Input {provider_id} add the rule to advertisement.
+          schema:
+            type : integer
+            format: int64
+            minimum: 0
+        - name: user_id
+          in: query
+          required: true
+          default: 4
+          description: Input {user_id} add the rule to advertisement.
+          schema:
+            type : integer
+            format: int64
+            minimum: 0
+        - name: ad_type
+          in: query
+          required: true
+          default: 'email'
+          enum: [ "email", "website"]
+          description: Input {ad_type} add the rule to advertisement.
+          schema:
+            type : string
+            format: string
+        - name: end_date
+          in: query
+          required: true
+          default: 20221231
+          description: Input {end_date} add the rule to advertisement.
+          schema:
+            type : string
+            format: date-time
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
