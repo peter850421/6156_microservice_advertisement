@@ -3,3 +3,4 @@ pyyaml
 pymysql
 flask
 flasgger
+flask_cors
