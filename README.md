@@ -8,3 +8,8 @@
 - project_insert_example.sql (data example insert file)
 
 ## micro service
+```
+cd code
+pip3 install -r requirements.txt 
+
+```
