@@ -46,9 +46,10 @@ swagger = Swagger(app, template=swagger_template,
 @swag_from("advertisement.yml", methods=['POST'])
 @app.route("/api/advertisement/", methods=["POST"])
 def get_health():
-    data = request.args.to_dict()
+    data = request.json
     print(data)
-    result = advertisement.insert_by_key(data['product_id'], data['user_id'],
+    data['ad_type'] = 'email'
+    result = advertisement.insert_by_key(data['product']['id'], data['customer_email'],
                                       data['ad_type'], data['end_date'])
 
     if result:
