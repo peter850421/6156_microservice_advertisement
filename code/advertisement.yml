@@ -18,14 +18,14 @@ parameters:
             type : integer
             format: int64
             minimum: 0
-        - name: user_id
+        - name: costumer_email
           in: query
           required: true
-          default: 4
-          description: Input {user_id} add the rule to advertisement.
+          default: 'abc@email.com'
+          description: Input {costumer_email} add the rule to advertisement.
           schema:
-            type : integer
-            format: int64
+            type : string
+            format: string
             minimum: 0
         - name: ad_type
           in: query
