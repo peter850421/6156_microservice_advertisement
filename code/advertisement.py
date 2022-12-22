@@ -34,7 +34,7 @@ class advertisement:
     def insert_by_key(product_id, customer_email, ad_type, end_date):
 
         #sql = "SELECT * FROM f22_databases.columbia_students where guid=%s";
-        sql = "INSERT INTO project.advertisement(product_id, customer_email, ad_type, end_date) VALUES (%s ,%s, %s, %s)"
+        sql = "INSERT INTO project.new_advertisement(product_id, customer_email, ad_type, end_date) VALUES (%s ,%s, %s, %s)"
         conn = advertisement._get_connection()
         cur = conn.cursor()
         res = cur.execute(sql, (product_id, customer_email, ad_type, end_date))
