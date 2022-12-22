@@ -42,8 +42,8 @@ swagger = Swagger(app, template=swagger_template,
 
 #CORS(app)
 #http://127.0.0.1:5011/api/advertisement/?product_id=3&user_id=4&ad_type=email&end_date=20221231
-@swag_from("advertisement.yml", methods=['GET'])
-@app.route("/api/advertisement/", methods=["GET"])
+@swag_from("advertisement.yml", methods=['POST'])
+@app.route("/api/advertisement/", methods=["POST"])
 def get_health():
     data = request.args.to_dict()
     print(data)
