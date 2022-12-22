@@ -37,6 +37,7 @@ swagger_config = {
     "swagger_ui": True,
     "specs_route": "/apidocs/"
 }
+CORS(app)
 swagger = Swagger(app, template=swagger_template,
                   config=swagger_config)
 
