@@ -9,11 +9,11 @@ paths:
 
 summary: Returns provider and product by provider_id.
 parameters:
-        - name: provider_id
+        - name: product_id
           in: query
           required: true
           default: 3
-          description: Input {provider_id} add the rule to advertisement.
+          description: Input {product_id} add the rule to advertisement.
           schema:
             type : integer
             format: int64

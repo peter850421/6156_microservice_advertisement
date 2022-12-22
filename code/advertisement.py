@@ -3,8 +3,9 @@ import os
 import yaml
 from yaml.loader import SafeLoader
 import datetime
+import sys,os
 
-with open('DB_info.yaml', 'r') as f:
+with open('./DB_info.yaml', 'r') as f:
     data = yaml.load(f, Loader=SafeLoader)
 
 
